@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 204" width="200" height="204"><ellipse cx="100" cy="107" rx="97" ry="95" fill="#3B2A1A" opacity="0.06"/>
+<ellipse cx="100" cy="104" rx="96" ry="95" fill="#3B2A1A" opacity="0.07"/><circle cx="100" cy="100" r="95" fill="#FAF8F2"/>
+<circle cx="100" cy="100" r="92.5" fill="none" stroke="#2C4C86" stroke-width="2.4"/>
+<circle cx="100" cy="100" r="84" fill="none" stroke="#3A5F9C" stroke-width="7" stroke-dasharray="6.5 15.49" stroke-linecap="round"/>
+<circle cx="100" cy="100" r="84" fill="none" stroke="#2C4C86" stroke-width="2.6" stroke-dasharray="0.1 21.89" stroke-linecap="round" transform="rotate(9.7 100 100)"/>
+<circle cx="100" cy="100" r="77" fill="none" stroke="#2C4C86" stroke-width="1.4"/>
+<circle cx="100" cy="100" r="75.5" fill="#F7F5EF"/>
+<path d="M22.1 63.6A86 86 0 0 1 57 25.5" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.6"/><clipPath id="c"><circle cx="100" cy="100" r="70"/></clipPath><g clip-path="url(#c)"><circle cx="100" cy="100" r="72" fill="#BF4526"/>
+<circle cx="100" cy="100" r="62" fill="#CB5130"/>
+<path d="M50 80c12-16 30-24 50-24" fill="none" stroke="#E07148" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+<rect x="60" y="70" width="25" height="21" rx="6" fill="#7A3A22" transform="rotate(-14 72.5 80.5)"/>
+<rect x="104" y="62" width="23" height="21" rx="6" fill="#6D321D" transform="rotate(10 115.5 72.5)"/>
+<rect x="121" y="100" width="25" height="21" rx="6" fill="#7A3A22" transform="rotate(-6 133.5 110.5)"/>
+<rect x="72" y="110" width="25" height="22" rx="6" fill="#6D321D" transform="rotate(16 84.5 121)"/>
+<rect x="100" y="126" width="21" height="18" rx="5" fill="#7A3A22" transform="rotate(-20 110.5 135)"/>
+<g fill="#9A5233" opacity="0.8">
+<rect x="64" y="74" width="10" height="4" rx="2" transform="rotate(-14 72.5 80.5)"/>
+<rect x="108" y="66" width="9" height="4" rx="2" transform="rotate(10 115.5 72.5)"/>
+<rect x="76" y="114" width="10" height="4" rx="2" transform="rotate(16 84.5 121)"/>
+</g>
+<path d="M92 88c8-6 18-4 20 3-7 7-17 6-20-3z" fill="#E8613F"/>
+<path d="M58 100c6-6 15-4 16 3-6 6-14 5-16-3z" fill="#E4593A"/>
+<path d="M128 80c7-3 14 1 13 7-7 3-13 0-13-7z" fill="#E8613F"/>
+<path d="M98 108c6-5 15-3 16 4-6 5-14 4-16-4z" fill="#E4593A"/>
+<g fill="#F09A6A" opacity="0.7">
+<circle cx="88" cy="100" r="3.5"/><circle cx="118" cy="92" r="2.6"/><circle cx="70" cy="122" r="2.4"/><circle cx="134" cy="130" r="2.8"/><circle cx="110" cy="146" r="2.2"/>
+</g>
+<g fill="#5E9A3A">
+<path d="M84 94c3-4 7-4 8 0-3 4-6 4-8 0z"/><path d="M114 120c3-4 7-4 8 0-3 4-6 4-8 0z"/><path d="M128 90c2-3 6-3 7 0-2 3-5 3-7 0z"/><path d="M70 108c2-3 6-3 7 0-2 3-5 3-7 0z"/>
+</g></g></svg>
