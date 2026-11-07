@@ -16,6 +16,10 @@ To preview, serve the folder with any static server, for example `python3 -m htt
 
 The app is `食序` in Chinese and `Mise: Kitchen and Meal Planner` in English. The full name is for where the name stands as a title: the home page's `<title>`, `og:site_name` and `og:title`, the link preview image, the first line of the privacy policy, and the page header, which sets it on two lines with the colon kept for screen readers. In a sentence, and in the other pages' titles, it's `Mise`, because a colon breaks a sentence. Chinese pages say `食序` everywhere; only the privacy policy's first line names the English too. The slogans are `Everything in place before you cook` and `开火之前，一切就位`.
 
+## The first screen
+
+The slogan stays put as the page's `h1`, set small. Under it a big title and a line take turns, one turn every four seconds. A turn is one `.hero-title`, one `.lede` and one dot, matched by `data-turn` and `data-pick`; to add one, add all three in both languages. The theme green marks the part of the title to remember, the second line as a rule (`em`).
+
 ## Changing text
 
 Change both languages. The Chinese font is a subset, so after adding Chinese text run this, pointing at the fonts in the app repo:

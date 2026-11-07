@@ -1,4 +1,5 @@
-// 食序 Mise website: remembers the language and the light or dark choice, and runs the plate palette on the home page.
+// 食序 Mise website: remembers the language and the light or dark choice, and on the home page turns the first screen's
+// text and runs the plate palette.
 (function () {
   'use strict';
 
@@ -35,6 +36,9 @@
   }
   systemDark.addEventListener('change', showTheme);
   showTheme();
+
+  var rotating = document.querySelector('[data-rot]');
+  if (rotating) createRotator(rotating);
 
   var stage = document.querySelector('.stage');
   if (stage) createPalette(stage);
@@ -292,5 +296,49 @@
       view.removeEventListener('pointerup', onPointerEnd);
       view.removeEventListener('pointercancel', onPointerEnd);
     };
+  }
+
+  /* The first screen's text. A turn lasts four seconds. It waits while the mouse is on the text, stops when a visitor
+     picks a turn or presses pause, and doesn't start for someone who asked their system for less motion. */
+  function createRotator(root) {
+    var view = root.ownerDocument.defaultView;
+    var items = Array.prototype.slice.call(root.querySelectorAll('[data-turn]'));
+    var picks = Array.prototype.slice.call(root.querySelectorAll('[data-pick]'));
+    var pauseButton = root.querySelector('.rot-pause');
+    var turn = 0;
+    var paused = false;
+    var held = false;
+    var timer = 0;
+    function show(next) {
+      turn = next;
+      items.forEach(function (item) { item.classList.toggle('on', Number(item.dataset.turn) === next); });
+      picks.forEach(function (pick, i) {
+        pick.classList.toggle('on', i === next);
+        if (i === next) pick.setAttribute('aria-current', 'true'); else pick.removeAttribute('aria-current');
+      });
+    }
+    function wait() {
+      view.clearTimeout(timer);
+      timer = view.setTimeout(function () {
+        if (!paused && !held && !root.ownerDocument.hidden) show((turn + 1) % picks.length);
+        wait();
+      }, 4000);
+    }
+    function setPaused(value) {
+      paused = value;
+      root.classList.toggle('paused', paused);
+      pauseButton.setAttribute('aria-label', paused ? pauseButton.dataset.play : pauseButton.dataset.pause);
+      wait();
+    }
+    picks.forEach(function (pick, i) {
+      pick.addEventListener('click', function () { show(i); setPaused(true); });
+    });
+    pauseButton.addEventListener('click', function () { setPaused(!paused); });
+    root.addEventListener('pointerover', function (event) {
+      held = event.pointerType === 'mouse' && !event.target.closest('.rot-ctl');
+    });
+    root.addEventListener('pointerleave', function () { held = false; wait(); });
+    setPaused(view.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    return function () { view.clearTimeout(timer); };
   }
 })();

@@ -25,7 +25,7 @@
 <script>try{var t=localStorage.getItem("mise.theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="assets/site.css">
 <noscript><style>.theme { display: none; }</style></noscript>
-<noscript><style>.spin,.dish .ib{visibility:hidden}</style></noscript>
+<noscript><style>.spin,.dish .ib,.rot-ctl{visibility:hidden}</style></noscript>
 </head>
 <body>
 <div class="site">
@@ -41,8 +41,22 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1>Everything in place<br>before you cook</h1>
-    <p class="lede">Save the dishes you cook, plan the days ahead and get a shopping list with the amounts already added up.</p>
+    <div class="hero-text" data-rot="1">
+      <h1>Everything in place before you cook</h1>
+      <div class="rot">
+        <p class="hero-title on" data-turn="0">Build your<br><em>cooking library</em></p>
+        <p class="hero-title" data-turn="1">Every ingredient<br><em>in its place</em></p>
+        <p class="hero-title" data-turn="2">Plan your meals<br>and <em>get the list</em></p>
+        <p class="hero-title" data-turn="3">Share the dishes<br><em>you love</em></p>
+      </div>
+      <div class="rot">
+        <p class="lede on" data-turn="0">Save every dish you cook. Your library grows with your experience.</p>
+        <p class="lede" data-turn="1">Every ingredient keeps its category, its unit and the stores you buy it from.</p>
+        <p class="lede" data-turn="2">Plan the days ahead and get a shopping list with the amounts already added up.</p>
+        <p class="lede" data-turn="3">Turn a dish you love into a picture and share it with the people who’d want it.</p>
+      </div>
+      <div class="rot-ctl" role="group" aria-label="Choose a feature"><button class="rot-dot on" type="button" data-pick="0" aria-label="Recipes" aria-current="true"></button><button class="rot-dot" type="button" data-pick="1" aria-label="Kitchen"></button><button class="rot-dot" type="button" data-pick="2" aria-label="Plans"></button><button class="rot-dot" type="button" data-pick="3" aria-label="Share"></button><button class="rot-pause" type="button" data-pause="Pause the changing text" data-play="Play the changing text" aria-label="Pause the changing text"><svg class="i pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 5.5v13M15.5 5.5v13"/></svg><svg class="i play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5l10 6.5-10 6.5z"/></svg></button></div>
+    </div>
     <div class="get">
       <a class="store" href="https://apps.apple.com/app/id6788616705"><img src="assets/badges/app-store-en.svg" alt="Download on the App Store" width="144" height="48"></a>
       <span class="fine">Free for iPhone · iOS 17 or later</span>

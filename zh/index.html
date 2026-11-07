@@ -24,7 +24,7 @@
 <script>try{var t=localStorage.getItem("mise.theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="../assets/site.css">
 <noscript><style>.theme { display: none; }</style></noscript>
-<noscript><style>.spin,.dish .ib{visibility:hidden}</style></noscript>
+<noscript><style>.spin,.dish .ib,.rot-ctl{visibility:hidden}</style></noscript>
 </head>
 <body>
 <div class="site zh">
@@ -40,8 +40,22 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1>开火之前<br>一切就位</h1>
-    <p class="lede">把拿手菜排进接下来几天<br>要买多少清单已经算好</p>
+    <div class="hero-text" data-rot="1">
+      <h1>开火之前，一切就位</h1>
+      <div class="rot">
+        <p class="hero-title on" data-turn="0">打造你的<br><em>厨房技能库</em></p>
+        <p class="hero-title" data-turn="1">常用食材<br><em>一目了然</em></p>
+        <p class="hero-title" data-turn="2">排好每一餐<br><em>清单自动生成</em></p>
+        <p class="hero-title" data-turn="3">把拿手菜<br><em>分享出去</em></p>
+      </div>
+      <div class="rot">
+        <p class="lede on" data-turn="0">做过的每道菜都存下来<br>技能库随着经验慢慢长大</p>
+        <p class="lede" data-turn="1">每样食材都记着分类和单位<br>还记着去哪家店买</p>
+        <p class="lede" data-turn="2">把拿手菜排进接下来几天<br>要买多少清单已经算好</p>
+        <p class="lede" data-turn="3">把拿手菜做成一张图<br>分享给想吃的人</p>
+      </div>
+      <div class="rot-ctl" role="group" aria-label="切换功能介绍"><button class="rot-dot on" type="button" data-pick="0" aria-label="食谱库" aria-current="true"></button><button class="rot-dot" type="button" data-pick="1" aria-label="厨房"></button><button class="rot-dot" type="button" data-pick="2" aria-label="计划"></button><button class="rot-dot" type="button" data-pick="3" aria-label="分享"></button><button class="rot-pause" type="button" data-pause="暂停切换" data-play="继续切换" aria-label="暂停切换"><svg class="i pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 5.5v13M15.5 5.5v13"/></svg><svg class="i play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5l10 6.5-10 6.5z"/></svg></button></div>
+    </div>
     <div class="get">
       <a class="store" href="https://apps.apple.com/app/id6788616705"><img src="../assets/badges/app-store-zh.svg" alt="在 App Store 下载" width="131" height="48"></a>
       <span class="fine">iPhone 免费下载 · iOS 17 及以上</span>

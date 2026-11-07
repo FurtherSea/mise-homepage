@@ -180,9 +180,32 @@ body { margin: 0; }
 
 /* —— First screen —— */
 .hero { text-align: center; padding-top: clamp(20px, 3.4cqw, 48px); }
-.hero h1 { font-size: clamp(52px, 5.3cqw, 76px); line-height: 1.08; font-weight: 700; letter-spacing: -0.012em; }
-.zh .hero h1 { letter-spacing: 0.02em; }
+.hero h1 { margin-bottom: clamp(6px, .8cqw, 12px); font-size: clamp(16px, 1.4cqw, 20px); font-weight: 700; color: var(--pri); }
+.hero-title { font-size: clamp(52px, 5.3cqw, 76px); line-height: 1.08; font-weight: 700; letter-spacing: -0.012em; }
+.zh .hero-title { letter-spacing: 0.02em; }
+.hero-title em { font-style: normal; color: var(--pri); }
 .lede { margin: clamp(14px, 1.5cqw, 22px) auto 0; max-width: 34em; font-size: clamp(17px, 1.46cqw, 21px); line-height: 1.5; color: var(--ink2); text-wrap: balance; }
+/* The text takes turns. All that changes sits in one grid cell, so the page never moves. */
+.hero-text { display: flow-root; }
+.rot { display: grid; justify-items: center; }
+.rot > * { grid-area: 1 / 1; opacity: 0; transform: translateY(6px); visibility: hidden; transition: opacity .4s ease, transform .4s ease, visibility 0s linear .4s; }
+.rot > .on { opacity: 1; transform: none; visibility: visible; transition: opacity .45s ease .15s, transform .45s ease .15s, visibility 0s; }
+@media (prefers-reduced-motion: reduce) {
+  .rot > *, .rot > .on { transform: none; transition: none; }
+}
+.rot-ctl { display: flex; align-items: center; justify-content: center; margin-top: clamp(8px, 1cqw, 14px); }
+.rot-dot { position: relative; width: 16px; height: 28px; display: grid; place-items: center; cursor: pointer; transition: width .3s ease; }
+.rot-dot::before { content: ""; width: 8px; height: 8px; border-radius: 4px; background: var(--line2); transition: width .3s ease, background-color .3s ease; }
+.rot-dot::after { content: ""; position: absolute; inset: -8px 0; }
+.rot-dot.on { width: 32px; }
+.rot-dot.on::before { width: 24px; background: var(--pri); }
+.rot-pause { position: relative; width: 28px; height: 28px; margin-left: 2px; display: grid; place-items: center; color: var(--ink2); cursor: pointer; }
+.rot-pause:hover { color: var(--ink); }
+.rot-pause::after { content: ""; position: absolute; inset: -8px; }
+.rot-pause .i { width: 14px; height: 14px; stroke-width: 2.2; }
+.rot-pause .play { display: none; }
+.paused .rot-pause .pause { display: none; }
+.paused .rot-pause .play { display: block; }
 .get { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: clamp(20px, 2cqw, 28px); }
 .store { display: block; border-radius: 8px; }
 .store img { height: 48px; width: auto; }
@@ -400,7 +423,7 @@ body { margin: 0; }
 @container site (max-width: 640px) {
   .wrap { padding: 0 20px; }
   .hero { padding-top: 16px; }
-  .hero h1 { font-size: clamp(33px, 10.2cqw, 52px); }
+  .hero-title { font-size: clamp(33px, 10.2cqw, 52px); }
   .stage { --d: 170px; margin-top: 44px; }
   .l1 { --x: -29cqw; --y: -14px; --s: .5; }
   .r1 { --x: 29cqw; --y: -14px; --s: .5; }
