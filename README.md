@@ -24,7 +24,7 @@ It needs `fonttools` and `brotli`, and it lists any character the source font la
 
 ## The privacy policy
 
-The policy states facts about the app, so keep it true. Before a version with analytics, ads, accounts or online features ships, update `privacy/` and `zh/privacy/`, the effective date on both, and the App Store privacy label.
+The policy states facts about the app, so keep it true. Before a version that sends new data, or adds ads, accounts or online features, ships, update `privacy/` and `zh/privacy/`, the effective date on both, and the App Store privacy label. What the app sends to Google Analytics is listed in `docs/usage-analytics.md` in the app repo; the policy names each action, so a new event changes the policy too.
 
 ## Fonts
 
