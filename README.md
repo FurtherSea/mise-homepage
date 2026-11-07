@@ -1,6 +1,6 @@
 # 食序 Mise website
 
-The website of Mise, a kitchen and meal-planning app for iPhone: home, privacy policy and support, in English and Chinese. It's plain HTML, CSS and a little JavaScript with no build step. GitHub Pages serves the files as they are from the `main` branch.
+The website of Mise: Kitchen and Meal Planner (食序 in Chinese), an app for iPhone: home, privacy policy and support, in English and Chinese. It's plain HTML, CSS and a little JavaScript with no build step. GitHub Pages serves the files as they are from the `main` branch.
 
 | | English | Chinese |
 | --- | --- | --- |
@@ -11,6 +11,10 @@ The website of Mise, a kitchen and meal-planning app for iPhone: home, privacy p
 `assets/site.css` holds the styles. Its colors, type and components come from the app (Design Direction in the app repo's `agents.md`). `assets/site.js` remembers the language and the light or dark choice, and runs the plate palette on the home page: every plate's place comes from one number, so moving, swiping and spinning all glide along the arc. English is the default: a visitor who picks Chinese is sent to the Chinese page from then on, and the choice stays in that browser.
 
 To preview, serve the folder with any static server, for example `python3 -m http.server`.
+
+## Names
+
+The app is `食序` in Chinese and `Mise: Kitchen and Meal Planner` in English. The full name is for where the name stands as a title: the home page's `<title>`, `og:site_name` and `og:title`, the link preview image, the first line of the privacy policy, and the page header, which sets it on two lines with the colon kept for screen readers. In a sentence, and in the other pages' titles, it's `Mise`, because a colon breaks a sentence. Chinese pages say `食序` everywhere; only the privacy policy's first line names the English too. The slogans are `Everything in place before you cook` and `开火之前，一切就位`.
 
 ## Changing text
 

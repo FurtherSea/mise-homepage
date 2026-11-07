@@ -158,6 +158,8 @@ body { margin: 0; }
 .wrap { width: 100%; max-width: 1184px; margin: 0 auto; padding: 0 32px; }
 .top { display: flex; align-items: center; gap: 8px; padding-top: 16px; padding-bottom: 16px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; height: 44px; margin-right: auto; font-size: 20px; font-weight: 700; letter-spacing: 0.01em; }
+.name { display: grid; gap: 1px; line-height: 1.12; }
+.name .desc { font-size: 12.5px; font-weight: 500; letter-spacing: 0; color: var(--ink2); white-space: nowrap; }
 .app-icon { border-radius: 22.37%; box-shadow: 0 0 0 1px var(--line); }
 .icon-l { display: var(--only-light); }
 .icon-d { display: var(--only-dark); }
@@ -388,11 +390,15 @@ body { margin: 0; }
   .doc { grid-template-columns: minmax(0, 1fr); }
   .toc { display: none; }
 }
-@container site (max-width: 640px) {
-  .wrap { padding: 0 20px; }
+/* The header takes two rows before its one row would run out of room. */
+@container site (max-width: 680px) {
   .top { flex-wrap: wrap; padding-top: 8px; padding-bottom: 0; }
   .brand { font-size: 19px; }
   .nav { order: 3; width: 100%; margin: 0 0 0 -14px; }
+  .theme, .lang { margin-left: 0; }
+}
+@container site (max-width: 640px) {
+  .wrap { padding: 0 20px; }
   .hero { padding-top: 16px; }
   .hero h1 { font-size: clamp(33px, 10.2cqw, 52px); }
   .stage { --d: 170px; margin-top: 44px; }
@@ -409,6 +415,12 @@ body { margin: 0; }
   .short { grid-template-columns: minmax(0, 1fr); padding: 6px 18px; }
   .help { grid-template-columns: minmax(0, 1fr); }
   .where td + td, .where th + th { width: 72px; }
+}
+/* The name, the button and the language switch stay on one row on every phone: the name takes what's left. */
+@container site (max-width: 389px) {
+  .brand { flex: 1 1 0; min-width: 0; height: auto; min-height: 44px; gap: 8px; }
+  .name .desc { font-size: 12px; white-space: normal; }
+  .lang > * { padding: 0 9px; }
 }
 @container site (max-width: 359px) { .dish-name { font-size: 19px; } }
 /* Phones narrower than 390: the whole card shrinks, and what's inside keeps its layout. */
