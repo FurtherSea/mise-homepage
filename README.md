@@ -37,6 +37,10 @@ The files in `assets/badges` are Apple's own artwork, unmodified, from the [App 
 
 ## The address
 
-The site lives at https://furthersea.org, set by the `CNAME` file and the Pages settings, with DNS at Cloudflare in DNS-only mode so GitHub can issue the certificate. `www.furthersea.org` and the old `furthersea.github.io/mise-homepage` redirect here.
+The site lives at https://furthersea.org/mise-homepage/. The path is this repository's name: the domain is bound in [`FurtherSea/furthersea.github.io`](https://github.com/FurtherSea/furthersea.github.io), the organization's own site, and GitHub Pages serves every other repository's site under that domain. So this repository has no `CNAME` file and no custom domain of its own. DNS is at Cloudflare in DNS-only mode so GitHub can issue the certificate. `www.furthersea.org/mise-homepage/` and `furthersea.github.io/mise-homepage/` redirect here.
 
-Pages link to each other with relative paths, so they work at any address. A new address needs changes in these places: `CNAME`, the `canonical`, `alternate` and `og:` tags in each page's head, and the root-relative paths in `404.html`.
+Pages link to each other with relative paths, so they work at any address. A new address, which includes renaming this repository, needs changes in these places: the `canonical`, `alternate` and `og:` tags in each page's head, and the root-relative paths in `404.html`.
+
+## Issues
+
+This repository's issues are the site's only contact: the privacy policy, the support page and the footers link to them. Keep them turned on.
