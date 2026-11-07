@@ -35,6 +35,8 @@ The policy states facts about the app, so keep it true. Before a version with an
 
 The files in `assets/badges` are Apple's own artwork, unmodified, from the [App Store Marketing Tools](https://toolbox.marketingtools.apple.com/app-store/). Apple's [guidelines](https://developer.apple.com/app-store/marketing/guidelines/) allow one badge per layout, at least 40 px high, with clear space of a quarter of its height, and ask for the trademark line that's in the home pages' footers.
 
-## Moving the site
+## The address
 
-Pages link to each other with relative paths, so they work at any address. A new address needs changes in these places: the `canonical`, `alternate` and `og:` tags in each page's head, and the `/mise-homepage/` paths in `404.html`.
+The site lives at https://furthersea.org, set by the `CNAME` file and the Pages settings, with DNS at Cloudflare in DNS-only mode so GitHub can issue the certificate. `www.furthersea.org` and the old `furthersea.github.io/mise-homepage` redirect here.
+
+Pages link to each other with relative paths, so they work at any address. A new address needs changes in these places: `CNAME`, the `canonical`, `alternate` and `og:` tags in each page's head, and the root-relative paths in `404.html`.
