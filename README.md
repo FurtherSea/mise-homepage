@@ -8,7 +8,7 @@ The website of Mise, a kitchen and meal-planning app for iPhone: home, privacy p
 | Privacy policy | `privacy/index.html` | `zh/privacy/index.html` |
 | Support | `support/index.html` | `zh/support/index.html` |
 
-`assets/site.css` holds the styles. Its colors, type and components come from the app (Design Direction in the app repo's `agents.md`). `assets/site.js` remembers the language picked and runs the plate palette on the home page: every plate's place comes from one number, so moving, swiping and spinning all glide along the arc. English is the default: a visitor who picks Chinese is sent to the Chinese page from then on, and the choice stays in that browser.
+`assets/site.css` holds the styles. Its colors, type and components come from the app (Design Direction in the app repo's `agents.md`). `assets/site.js` remembers the language and the light or dark choice, and runs the plate palette on the home page: every plate's place comes from one number, so moving, swiping and spinning all glide along the arc. English is the default: a visitor who picks Chinese is sent to the Chinese page from then on, and the choice stays in that browser.
 
 To preview, serve the folder with any static server, for example `python3 -m http.server`.
 

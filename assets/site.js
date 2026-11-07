@@ -1,4 +1,4 @@
-// 食序 Mise website: remembers the language picked, and runs the plate palette on the home page.
+// 食序 Mise website: remembers the language and the light or dark choice, and runs the plate palette on the home page.
 (function () {
   'use strict';
 
@@ -9,6 +9,32 @@
       try { localStorage.setItem('mise.lang', link.dataset.lang); } catch (e) { /* private window: skip */ }
     });
   });
+
+  // The light/dark button. A visitor follows the system until they press it, and the choice stays in this browser
+  // only (the small script in each page's head applies it before the first paint). Pressing it back to what the
+  // system shows drops the choice, so the page follows the system again.
+  var root = document.documentElement;
+  var themeButton = document.querySelector('.theme');
+  var systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+  var themeColors = document.querySelectorAll('meta[name="theme-color"]');
+  function isDark() { return root.dataset.theme ? root.dataset.theme === 'dark' : systemDark.matches; }
+  function showTheme() {
+    if (themeButton) themeButton.setAttribute('aria-pressed', String(isDark()));
+    themeColors.forEach(function (meta) { meta.content = isDark() ? '#13140E' : '#F4F2E8'; });
+  }
+  if (themeButton) {
+    themeButton.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      var system = systemDark.matches ? 'dark' : 'light';
+      if (next === system) delete root.dataset.theme; else root.dataset.theme = next;
+      try {
+        if (next === system) localStorage.removeItem('mise.theme'); else localStorage.setItem('mise.theme', next);
+      } catch (e) { /* private window: the choice lasts for this page */ }
+      showTheme();
+    });
+  }
+  systemDark.addEventListener('change', showTheme);
+  showTheme();
 
   var stage = document.querySelector('.stage');
   if (stage) createPalette(stage);
