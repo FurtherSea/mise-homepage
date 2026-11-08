@@ -8,7 +8,7 @@ The website of Mise: Kitchen and Meal Planner (食序 in Chinese), an app for iP
 | Privacy policy | `privacy/index.html` | `zh/privacy/index.html` |
 | Support | `support/index.html` | `zh/support/index.html` |
 
-`assets/site.css` holds the styles. Its colors, type and components come from the app (Design Direction in the app repo's `agents.md`). `assets/site.js` remembers the language and the light or dark choice, and runs the plate palette on the home page: every plate's place comes from one number, so moving, swiping and spinning all glide along the arc. English is the default: a visitor who picks Chinese is sent to the Chinese page from then on, and the choice stays in that browser.
+`assets/site.css` holds the styles. Its colors, type and components come from the app (Design Direction in the app repo's `agents.md`). `assets/site.js` remembers the language and the light or dark choice, puts the contact address together (see Contact below), and runs the plate palette on the home page: every plate's place comes from one number, so moving, swiping and spinning all glide along the arc. English is the default: a visitor who picks Chinese is sent to the Chinese page from then on, and the choice stays in that browser.
 
 To preview, serve the folder with any static server, for example `python3 -m http.server`.
 
@@ -49,6 +49,8 @@ The site lives at https://furthersea.org/mise-homepage/. The path is this reposi
 
 Pages link to each other with relative paths, so they work at any address. A new address, which includes renaming this repository, needs changes in these places: the `canonical`, `alternate` and `og:` tags in each page's head, and the root-relative paths in `404.html`.
 
-## Issues
+## Contact
 
-This repository's issues are the site's only contact: the privacy policy, the support page and the footers link to them. Keep them turned on.
+Email comes first: the support page and the privacy policy's Contact section have `Email us` and `Show address`. The address is never in the HTML in one piece, so a scraper reading the source finds no `name@domain` address and no `mailto:` link. Each `.mail` block holds it backwards in `data-mail`, with `/` in place of `@`, and `assets/site.js` puts it together only for someone who reaches for it: `Email us` gets its `mailto:` link as the pointer or the focus comes to it, and `Show address` puts the address on the page with a `Copy` button. Without JavaScript the block is hidden and the page spells the address out with at and dot. To change the address, write the new one backwards with `/` for `@` in each `data-mail`, and change the spelled-out line under it.
+
+This repository's issues stay as the public alternative: those two pages and the footers link to them. Keep them turned on.

@@ -1,5 +1,5 @@
-// 食序 Mise website: remembers the language and the light or dark choice, and on the home page turns the first screen's
-// text and runs the plate palette.
+// 食序 Mise website: remembers the language and the light or dark choice, puts the contact address together, and on the
+// home page turns the first screen's text and runs the plate palette.
 (function () {
   'use strict';
 
@@ -36,6 +36,8 @@
   }
   systemDark.addEventListener('change', showTheme);
   showTheme();
+
+  document.querySelectorAll('[data-mail]').forEach(createMail);
 
   var rotating = document.querySelector('[data-rot]');
   if (rotating) createRotator(rotating);
@@ -296,6 +298,71 @@
       view.removeEventListener('pointerup', onPointerEnd);
       view.removeEventListener('pointercancel', onPointerEnd);
     };
+  }
+
+  /* The contact address. It's never in a page in one piece, so a scraper reading the HTML finds no name@domain address
+     and no mailto: link: each [data-mail] block holds it backwards, with "/" in place of "@". It's put together only for
+     someone who reaches for it. Email us gets its mailto: link as the pointer or the focus comes to it, and Show
+     address puts the address on the page to read or copy. Without scripts the block is hidden, and the page spells
+     the address out in words instead. */
+  function createMail(box) {
+    var view = box.ownerDocument.defaultView;
+    var open = box.querySelector('[data-mail-open]');
+    var show = box.querySelector('[data-mail-show]');
+    var shown = box.querySelector('[data-mail-shown]');
+    var text = box.querySelector('[data-mail-text]');
+    var copy = box.querySelector('[data-mail-copy]');
+    var status = box.querySelector('[data-mail-status]');
+    var timer = 0;
+
+    function address() {
+      return box.dataset.mail.split('').reverse().join('').replace('/', '@');
+    }
+
+    function arm() {
+      var href = 'mailto:' + address();
+      if (open.getAttribute('href') !== href) open.setAttribute('href', href);
+    }
+    // The click itself still follows the link: the address is in place before the browser opens it.
+    ['pointerenter', 'pointerdown', 'focus', 'click'].forEach(function (type) { open.addEventListener(type, arm); });
+
+    show.addEventListener('click', function () {
+      text.textContent = address();
+      shown.hidden = false;
+      text.focus();
+      show.hidden = true;
+    });
+
+    copy.addEventListener('click', function () {
+      var nav = view.navigator;
+      if (nav.clipboard && view.isSecureContext) {
+        nav.clipboard.writeText(address()).then(copied, selectAndCopy);
+      } else {
+        selectAndCopy();
+      }
+    });
+
+    // Where the clipboard can't be written to, the address is selected so it can be copied by hand.
+    function selectAndCopy() {
+      var range = box.ownerDocument.createRange();
+      range.selectNodeContents(text);
+      var selection = view.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      var done = false;
+      try { done = box.ownerDocument.execCommand('copy'); } catch (e) { /* the selection stays */ }
+      if (done) copied();
+    }
+
+    // Says so on the page and to a screen reader, then clears. The line empties first, so copying again says it again.
+    function copied() {
+      view.clearTimeout(timer);
+      status.textContent = '';
+      timer = view.setTimeout(function () {
+        status.textContent = status.dataset.done;
+        timer = view.setTimeout(function () { status.textContent = ''; }, 3000);
+      }, 60);
+    }
   }
 
   /* The first screen's text. A turn lasts four seconds. It waits while the mouse is on the text, stops when a visitor

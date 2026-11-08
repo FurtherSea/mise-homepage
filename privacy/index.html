@@ -24,7 +24,7 @@
 <script>try{if(localStorage.getItem("mise.lang")==="zh")location.replace("../zh/privacy/"+location.hash)}catch(e){}</script>
 <script>try{var t=localStorage.getItem("mise.theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="../assets/site.css">
-<noscript><style>.theme { display: none; }</style></noscript>
+<noscript><style>.theme, .mail { display: none; }</style></noscript>
 </head>
 <body>
 <div class="site">
@@ -38,9 +38,9 @@
 
 <main class="wrap">
 <div class="doc-head">
-  <span class="eyebrow">Effective November 6, 2026</span>
+  <span class="eyebrow">Effective November 8, 2026</span>
   <h1>Privacy Policy</h1>
-  <p>Mise: Kitchen and Meal Planner (<span lang="zh-Hans">食序</span> in Chinese) is a personal kitchen and meal-planning app. This policy explains what the app stores, how iCloud sync works and what usage statistics it sends to Google Analytics. It covers version 1.1 and later. Earlier versions send no usage statistics.</p>
+  <p>Mise: Kitchen and Meal Planner (<span lang="zh-Hans">食序</span> in Chinese) is a personal kitchen and meal-planning app. This policy explains what the app stores, how iCloud sync and sharing work, and what usage statistics it sends to Google Analytics. It covers version 2.0 and later. Earlier versions on the App Store send no usage statistics.</p>
 </div>
 <ul class="short" aria-label="The short version">
   <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>No account or sign-in</li>
@@ -54,7 +54,8 @@
   <a href="#stores">What the app stores</a>
   <a href="#icloud">iCloud sync</a>
   <a href="#photos">Dish photos and the camera</a>
-  <a href="#sharing">Sharing your list</a>
+  <a href="#profile">Your profile</a>
+  <a href="#sharing">Sharing a dish or your list</a>
   <a href="#usage">Usage statistics</a>
   <a href="#tracking">Ads and tracking</a>
   <a href="#diagnostics">Diagnostics from Apple</a>
@@ -67,16 +68,17 @@
 <article class="prose">
 <section>
   <h2 id="stores">What the app stores</h2>
-  <p>Everything in Mise is something you entered or chose: ingredients with their categories, units, stores and notes; recipes with their ingredients, tags, notes and photos; meal plans and the dishes in them; and your settings. The app adds one thing of its own: usage statistics.</p>
+  <p>Everything in Mise is something you entered or chose: ingredients with their categories, units, stores and notes; recipes with their ingredients, steps, tags, notes and photos; meal plans and the dishes in them; the name and cuisines in your profile; and your settings. The app adds one thing of its own: usage statistics.</p>
   <table class="where">
     <thead><tr><th scope="col"><span class="vh">Data</span></th><th scope="col">This device</th><th scope="col">Your iCloud</th><th scope="col">Google</th></tr></thead>
     <tbody>
       <tr><td>Ingredients and stores</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td></tr>
-      <tr><td>Recipes, tags and dish photos</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td></tr>
+      <tr><td>Recipes, steps, tags and dish photos</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td></tr>
       <tr><td>Meal plans and dishes</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td></tr>
+      <tr><td>Your profile: name and cuisines</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td></tr>
       <tr><td>Default plan length, week start and intro status</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td></tr>
       <tr><td>Shopping list ticks</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td></tr>
-      <tr><td>App language and kitchen sort</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td></tr>
+      <tr><td>App language, kitchen sort and dish card options</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td></tr>
       <tr><td>First-run guide progress</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td></tr>
       <tr><td>Usage statistics and install IDs</td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td><td class="no"><span aria-hidden="true">–</span><span class="vh">No</span></td><td><svg class="i" viewBox="0 0 24 24" role="img" aria-label="Yes"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></td></tr>
     </tbody>
@@ -94,12 +96,19 @@
   <p>Mise keeps only the square you crop, at most 600 pixels wide, saved as a new JPEG without the original photo’s location or other metadata. It’s stored with the recipe and syncs like the rest of it.</p>
 </section>
 <section>
-  <h2 id="sharing">Sharing your list</h2>
-  <p>Share list on the shopping page hands the text of your list to the iOS share sheet. It goes only where you send it.</p>
+  <h2 id="profile">Your profile</h2>
+  <p>Your profile is the name you write and the cuisines you love. You can fill it in after the intro pages or later under Profile in Settings, or leave it empty. It’s stored and synced like the rest of your data, so the developer can’t see it.</p>
+  <p>Mise shows the name and cuisines in your profile, and puts the name on dish cards while Show your name is on. It uses them nowhere else.</p>
+</section>
+<section>
+  <h2 id="sharing">Sharing a dish or your list</h2>
+  <p>Share this dish, on a recipe, makes a dish card: a picture of the dish in one of four layouts. A card shows the dish on its plate, with its photo if it has one, and its name, and can show its cooking time and how many times you’ve cooked it. Depending on the layout, it also lists the ingredients and their amounts, or the steps. Its footer names Mise.</p>
+  <p>If your profile has a name, the card puts it before the dish’s name, as in Lin’s Tomato and Egg, unless you turn off Show your name. The card also carries a QR code unless you turn off Show QR code. The code holds only the address of Mise’s page on the App Store, <a href="https://apps.apple.com/app/id6788616705">https://apps.apple.com/app/id6788616705</a>, and nothing about you or the dish.</p>
+  <p>Mise makes the card on your iPhone and doesn’t upload it anywhere. Share hands it to the iOS share sheet as an image file named after the dish, and it goes only where you send it. Save to Photos adds it to your photo library. iOS asks for your permission the first time, and that permission lets Mise add photos, not see them. Share list on the shopping page hands the text of your list to the share sheet in the same way. Sharing and saving count in the <a href="#usage">usage statistics</a>, never with the card or what’s on it.</p>
 </section>
 <section>
   <h2 id="usage">Usage statistics</h2>
-  <p>Starting with version 1.1, Mise uses Google Analytics for Firebase, a Google service, to count how many installs are active each day and month and how often each feature gets used. The developer uses these numbers to decide what to improve, and for nothing else. Google’s SDK is the only third-party SDK in the app.</p>
+  <p>Starting with version 2.0, Mise uses Google Analytics for Firebase, a Google service, to count how many installs are active each day and month and how often each feature gets used. The developer uses these numbers to decide what to improve, and for nothing else. Google’s SDK is the only third-party SDK in the app.</p>
   <p><b>What the app reports.</b> These actions and nothing else, some with a fixed option or a small number:</p>
   <ul>
     <li>Which tab you open</li>
@@ -111,9 +120,12 @@
     <li>Marking a dish done, ticking a shopping item, tapping Share list and changing how the list is grouped</li>
     <li>Switching to the recipe palette or the calendar’s month view</li>
     <li>Using Spin or starting a search, and on which page</li>
+    <li>Picking a layout on Share this dish, and which one</li>
+    <li>Tapping Save to Photos on Share this dish, with the layout and whether the card shows the QR code</li>
+    <li>Using Share on Share this dish, with the layout, whether the card shows the QR code and where the card went: Instagram, Threads, X, Xiaohongshu, Weibo, WeChat, Messages, Mail, AirDrop, Save Image, Copy or Save to Files; “other” for any other app, without its name; or nowhere, if you close the share sheet</li>
   </ul>
   <p>Google’s SDK also records some things by itself: when the app is first opened, each session and how long the app is on screen, and app and iOS updates. It also records your device model, iOS version, app version, device language, the store the app came from and your approximate location (city, region and country). Google estimates that location from your IP address, and says Google Analytics doesn’t log or store the address itself. Mise doesn’t use Location Services.</p>
-  <p><b>What it never sends.</b> The names of your dishes, ingredients or stores, quantities, notes, photos, or anything you type, searches included. Mise has no account, so there’s no name, email address or Apple ID to send.</p>
+  <p><b>What it never sends.</b> The names of your dishes, ingredients or stores, quantities, notes, steps, photos, dish cards, the name and cuisines in your profile, or anything you type, searches included. Mise has no account, so there’s no email address or Apple ID to send.</p>
   <p><b>Identifiers.</b> The SDK uses two random IDs made for each install: an App Instance ID and a Firebase Installation ID. Deleting the app resets both. With no accounts, the numbers count installs, not people: two devices count twice.</p>
   <p><b>Who gets it and how long it’s kept.</b> The data goes to Google’s servers, which may be outside your country or region. Google is the only third party that receives it. Google handles it under the Google Analytics terms and <a href="https://policies.google.com/privacy">its privacy policy</a>, which give it the same protection as this policy. <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a> explains more. The developer has turned off the settings that would let Google use this data for its own products or add it to its benchmarks.</p>
   <p>The developer sees reports, both totals and activity by install ID, and nothing in them says who you are. Google Analytics is set to delete data tied to an install ID within about 14 months of that install’s last use. Totals in standard reports aren’t affected by that setting and can stay longer.</p>
@@ -131,9 +143,9 @@
 </section>
 <section>
   <h2 id="choices">Your choices</h2>
-  <p>You can edit your ingredients, recipes and plans in the app at any time, and delete ingredients, recipes and plans from today on.</p>
-  <p>Two things stay on purpose, so your history holds up. Past meals can’t be deleted, only marked done or not done, and a recipe used in a past meal is hidden from your library rather than erased.</p>
-  <p>To remove everything, open Settings in Mise and tap Delete all data. It clears your ingredients, recipes and plans from this device and from iCloud, and from your other devices on the same iCloud account. Deleting the app only removes its data from that iPhone, and what’s in iCloud comes back if you install it again. To stop syncing only, turn off iCloud for Mise in iOS Settings.</p>
+  <p>You can edit your ingredients, recipes, dishes and profile in the app at any time. You can delete ingredients and recipes, delete a dish on any day, past days included, and cancel a plan that hasn’t ended, which leaves its dishes on their days.</p>
+  <p>Two things stay on purpose, so your history holds up. A plan that has ended can’t be canceled, and a recipe used in a past meal is hidden from your library rather than erased.</p>
+  <p>To remove everything, open Settings in Mise and tap Delete all data. It clears your ingredients, recipes, plans and profile from this device and from iCloud, and from your other devices on the same iCloud account. Deleting the app only removes its data from that iPhone, and what’s in iCloud comes back if you install it again. To stop syncing only, turn off iCloud for Mise in iOS Settings.</p>
   <p>Delete all data also resets the App Instance ID on this device, so the app counts as a new install from then on. It doesn’t remove usage statistics already sent, which expire as <a href="#usage">described above</a>. There’s no account and the app doesn’t show its IDs, so the developer can’t tell which statistics are yours or look them up for you.</p>
 </section>
 <section>
@@ -147,11 +159,19 @@
 <section>
   <h2 id="changes">Changes</h2>
   <p>This policy changes when what Mise does with data changes. If a future version sends new kinds of data, or adds anything like ads, accounts or online features, this page will say so before that version ships, and the date at the top will change.</p>
-  <p class="dim">November 6, 2026: added the usage statistics that version 1.1 sends to Google Analytics.</p>
+  <p class="dim">November 8, 2026: added the profile, recipe steps and dish cards that version 2.0 brings, with the usage statistics for dish cards; said that dishes on past days can be deleted; made email the first way to reach us.</p>
+  <p class="dim">November 6, 2026: added the usage statistics that version 2.0 sends to Google Analytics.</p>
 </section>
 <section>
   <h2 id="contact">Contact</h2>
-  <p>For privacy questions or anything else, open a <a href="https://github.com/FurtherSea/mise-homepage/issues">GitHub issue</a>. Issues are public, so leave out anything private.</p>
+  <p>For privacy questions or anything else, email us. The developer gets your address and your message, and uses them only to answer you.</p>
+  <div class="acts mail" data-mail="gro.aesrehtruf/oahnuj">
+    <a class="btn pri" href="#contact" data-mail-open>Email us</a>
+    <button class="more" type="button" data-mail-show>Show address</button>
+    <span class="mail-shown" data-mail-shown hidden><span class="mail-text" tabindex="-1" data-mail-text></span><button class="more" type="button" aria-label="Copy address" data-mail-copy>Copy</button><span class="mail-done" role="status" data-mail-status data-done="Copied"></span></span>
+  </div>
+  <noscript><p>Write to junhao at furthersea dot org.</p></noscript>
+  <p>You can also open a <a href="https://github.com/FurtherSea/mise-homepage/issues">GitHub issue</a> instead. Issues are public, so leave out anything private.</p>
 </section>
 </article>
 </div>

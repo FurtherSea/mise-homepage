@@ -23,7 +23,7 @@
 <link rel="apple-touch-icon" href="../../assets/icon/apple-touch-icon.png">
 <script>try{var t=localStorage.getItem("mise.theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="../../assets/site.css">
-<noscript><style>.theme { display: none; }</style></noscript>
+<noscript><style>.theme, .mail { display: none; }</style></noscript>
 </head>
 <body>
 <div class="site zh">
@@ -41,10 +41,16 @@
   <p>食序的使用帮助：食材、食谱、餐食计划、采购清单和 iCloud 同步。</p>
 </div>
 <div class="help">
-<section>
-  <h2>报告问题</h2>
-  <p>告诉我们你的 iPhone 型号、iOS 版本和发生了什么，有截图更好。</p>
-  <div class="acts"><a class="btn pri" href="https://github.com/FurtherSea/mise-homepage/issues">打开 GitHub Issues</a></div>
+<section id="contact">
+  <h2>联系我们</h2>
+  <p>有疑问或遇到问题，发邮件给我们。如果是 App 出了问题，告诉我们你的 iPhone 型号、iOS 版本和发生了什么，有截图更好。</p>
+  <div class="acts mail" data-mail="gro.aesrehtruf/oahnuj">
+    <a class="btn pri" href="#contact" data-mail-open>发邮件给我们</a>
+    <button class="more" type="button" data-mail-show>显示邮箱地址</button>
+    <span class="mail-shown" data-mail-shown hidden><span class="mail-text" tabindex="-1" data-mail-text></span><button class="more" type="button" aria-label="复制邮箱地址" data-mail-copy>复制</button><span class="mail-done" role="status" data-mail-status data-done="已复制"></span></span>
+  </div>
+  <noscript><p>邮箱：junhao at furthersea dot org（at 即 @，dot 即 .）</p></noscript>
+  <div class="acts"><a class="more" href="https://github.com/FurtherSea/mise-homepage/issues">或者提交 GitHub Issue<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></a></div>
   <p class="fine">Issue 是公开的，请不要写私人信息。</p>
 </section>
 <section>
@@ -67,7 +73,7 @@
 </section>
 <section>
   <h2>数据和隐私</h2>
-  <p>食材、食谱、计划和成品照保存在你的设备和你自己的 iCloud 里。从 1.1 版起，App 还会把使用统计发给 Google Analytics，详见隐私政策。</p>
+  <p>食材、食谱、计划和成品照保存在你的设备和你自己的 iCloud 里。从 2.0 版起，App 还会把使用统计发给 Google Analytics，详见隐私政策。</p>
   <div class="acts">
     <a class="more" href="../privacy/">阅读隐私政策<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></a>
     <a class="more" href="../privacy/#choices">删除你的数据<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></a>

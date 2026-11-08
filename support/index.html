@@ -24,7 +24,7 @@
 <script>try{if(localStorage.getItem("mise.lang")==="zh")location.replace("../zh/support/"+location.hash)}catch(e){}</script>
 <script>try{var t=localStorage.getItem("mise.theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="../assets/site.css">
-<noscript><style>.theme { display: none; }</style></noscript>
+<noscript><style>.theme, .mail { display: none; }</style></noscript>
 </head>
 <body>
 <div class="site">
@@ -42,10 +42,16 @@
   <p>Help with your ingredients, recipes, meal plans, shopping lists and iCloud sync in Mise.</p>
 </div>
 <div class="help">
-<section>
-  <h2>Report a problem</h2>
-  <p>Tell us your iPhone model, iOS version and what happened. A screenshot helps.</p>
-  <div class="acts"><a class="btn pri" href="https://github.com/FurtherSea/mise-homepage/issues">Open GitHub Issues</a></div>
+<section id="contact">
+  <h2>Contact us</h2>
+  <p>Email us with a question or a problem. For a problem, tell us your iPhone model, iOS version and what happened. A screenshot helps.</p>
+  <div class="acts mail" data-mail="gro.aesrehtruf/oahnuj">
+    <a class="btn pri" href="#contact" data-mail-open>Email us</a>
+    <button class="more" type="button" data-mail-show>Show address</button>
+    <span class="mail-shown" data-mail-shown hidden><span class="mail-text" tabindex="-1" data-mail-text></span><button class="more" type="button" aria-label="Copy address" data-mail-copy>Copy</button><span class="mail-done" role="status" data-mail-status data-done="Copied"></span></span>
+  </div>
+  <noscript><p>Write to junhao at furthersea dot org.</p></noscript>
+  <div class="acts"><a class="more" href="https://github.com/FurtherSea/mise-homepage/issues">Or open a GitHub issue<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></a></div>
   <p class="fine">Issues are public, so leave out anything private.</p>
 </section>
 <section>
@@ -68,7 +74,7 @@
 </section>
 <section>
   <h2>Data and privacy</h2>
-  <p>Your ingredients, recipes, plans and photos stay on your device and in your own iCloud. Starting with version 1.1, the app also sends usage statistics to Google Analytics; the privacy policy has the details.</p>
+  <p>Your ingredients, recipes, plans and photos stay on your device and in your own iCloud. Starting with version 2.0, the app also sends usage statistics to Google Analytics; the privacy policy has the details.</p>
   <div class="acts">
     <a class="more" href="../privacy/">Read the privacy policy<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></a>
     <a class="more" href="../privacy/#choices">Delete your data<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></a>
