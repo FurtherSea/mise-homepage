@@ -1,4 +1,4 @@
-Resource Han Rounded CN 0.990, subset for the 食序 / Mise website by tools/subset_fonts.py.
+Resource Han Rounded CN 0.990, subset for the 食序 / Shiso website by tools/subset_fonts.py.
 https://github.com/CyanoHao/Resource-Han-Rounded
 
 Copyright © 2018—2019 Cyano Hao.

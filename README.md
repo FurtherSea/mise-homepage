@@ -1,6 +1,6 @@
-# 食序 Mise website
+# 食序 Shiso website
 
-The website of Mise: Kitchen and Meal Planner (食序 in Chinese), an app for iPhone: home, privacy policy and support, in English and Chinese. It's plain HTML, CSS and a little JavaScript with no build step. GitHub Pages serves the files as they are from the `main` branch.
+The website of Shiso: Meal Planner & Recipes (食序 in Chinese), an app for iPhone: home, privacy policy and support, in English and Chinese. It's plain HTML, CSS and a little JavaScript with no build step. GitHub Pages serves the files as they are from the `main` branch.
 
 | | English | Chinese |
 | --- | --- | --- |
@@ -14,7 +14,9 @@ To preview, serve the folder with any static server, for example `python3 -m htt
 
 ## Names
 
-The app is `食序` in Chinese and `Mise: Kitchen and Meal Planner` in English. The full name is for where the name stands as a title: the home page's `<title>`, `og:site_name` and `og:title`, the link preview image, the first line of the privacy policy, and the page header, which sets it on two lines with the colon kept for screen readers. In a sentence, and in the other pages' titles, it's `Mise`, because a colon breaks a sentence. Chinese pages say `食序` everywhere; only the privacy policy's first line names the English too. The slogans are `Everything in place before you cook` and `开火之前，一切就位`.
+The app is `食序` in Chinese and `Shiso: Meal Planner & Recipes` in English. The full name is for where the name stands as a title: the home page's `<title>`, `og:site_name` and `og:title`, the link preview image, the first line of the privacy policy, and the page header, which sets it on two lines with the colon kept for screen readers. In a sentence, and in the other pages' titles, it's `Shiso`, because a colon breaks a sentence. Chinese pages say `食序` everywhere; only the privacy policy's first line and its note on the name change name the English too. The slogans are `Everything in place before you cook` and `开火之前，一切就位`.
+
+The English name was `Mise` until November 8, 2026. The address, this repository's name and the `mise.lang` and `mise.theme` keys in the browser's storage keep it, so links and saved choices still work.
 
 ## The first screen
 

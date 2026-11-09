@@ -1,4 +1,4 @@
-// 食序 Mise website: remembers the language and the light or dark choice, puts the contact address together, and on the
+// 食序 Shiso website: remembers the language and the light or dark choice, puts the contact address together, and on the
 // home page turns the first screen's text and runs the plate palette.
 (function () {
   'use strict';
