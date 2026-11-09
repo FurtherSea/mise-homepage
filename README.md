@@ -14,7 +14,7 @@ To preview, serve the folder with any static server, for example `python3 -m htt
 
 ## Names
 
-The app is `食序` in Chinese and `Shiso` in English, with nothing after the name: the page header, the home page's `<title>`, `og:site_name` and `og:title`, the link preview image and the privacy policy's first line all say just `Shiso`, and the other pages' titles pair it with the page, as in `Support · Shiso`. Chinese pages say `食序` everywhere; only the privacy policy's first line and its note on the name change name the English too. The slogans are `Everything in place before you cook` and `开火之前，一切就位`.
+The app is `食序` in Chinese and `Shiso` in English, with nothing after the name: the page header, the home page's `<title>`, `og:site_name` and `og:title`, the link preview image and the privacy policy's first line all say just `Shiso`, and the other pages' titles pair it with the page, as in `Support · Shiso`. Chinese pages say `食序` everywhere; only the privacy policy's first line and its note on the name change name the English too. The slogans are `Cooking that grows with you` and `陪你越做越好`.
 
 The English name was `Mise` until November 8, 2026. The address, this repository's name and the `mise.lang` and `mise.theme` keys in the browser's storage keep it, so links and saved choices still work.
 
