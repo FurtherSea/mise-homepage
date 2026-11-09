@@ -16,7 +16,7 @@ To preview, serve the folder with any static server, for example `python3 -m htt
 
 The app is `食序` in Chinese and `Shiso` in English, with nothing after the name: the page header, the home page's `<title>`, `og:site_name` and `og:title`, the link preview image and the privacy policy's first line all say just `Shiso`, and the other pages' titles pair it with the page, as in `Support · Shiso`. Chinese pages say `食序` everywhere; only the privacy policy's first line and its note on the name change name the English too. The slogans are `Cooking that grows with you` and `陪你越做越好`.
 
-The English name was `Mise` until November 8, 2026. The address, this repository's name and the `mise.lang` and `mise.theme` keys in the browser's storage keep it, so links and saved choices still work.
+The English name was `Mise` until November 8, 2026. The `mise.lang` and `mise.theme` keys in the browser's storage keep that name, so saved choices still work.
 
 ## The first screen
 
@@ -47,9 +47,11 @@ The files in `assets/badges` are Apple's own artwork, unmodified, from the [App 
 
 ## The address
 
-The site lives at https://furthersea.org/mise-homepage/. The path is this repository's name: the domain is bound in [`FurtherSea/furthersea.github.io`](https://github.com/FurtherSea/furthersea.github.io), the organization's own site, and GitHub Pages serves every other repository's site under that domain. So this repository has no `CNAME` file and no custom domain of its own. DNS is at Cloudflare in DNS-only mode so GitHub can issue the certificate. `www.furthersea.org/mise-homepage/` and `furthersea.github.io/mise-homepage/` redirect here.
+The site lives at https://furthersea.org/shiso/. The path is this repository's name: the domain is bound in [`FurtherSea/furthersea.github.io`](https://github.com/FurtherSea/furthersea.github.io), the organization's own site, and GitHub Pages serves every other repository's site under that domain. So this repository has no `CNAME` file and no custom domain of its own. DNS is at Cloudflare in DNS-only mode so GitHub can issue the certificate. `www.furthersea.org/shiso/` and `furthersea.github.io/shiso/` redirect here.
 
 Pages link to each other with relative paths, so they work at any address. A new address, which includes renaming this repository, needs changes in these places: the `canonical`, `alternate` and `og:` tags in each page's head, and the root-relative paths in `404.html`.
+
+The site was at `/mise-homepage/` until November 2026, and copies of the app already installed open their privacy and support pages there. So `404.html` in `FurtherSea/furthersea.github.io`, which GitHub Pages serves for any address no repository covers, sends every address under `/mise-homepage/` to the same page under `/shiso/`. Keep that redirect.
 
 ## Contact
 
